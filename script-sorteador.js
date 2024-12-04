@@ -61,6 +61,19 @@ function reiniciar() {
   botaoReiniciar.classList.add("hidden");
 }
 
+// Altera o emoji ao clicar
+const emojiSpan = document.getElementById("emoji");
+
+// Lista de emojis alternados
+const emojis = ["🩶", "❤️"];
+let emojiIndex = 0;
+
+emojiSpan.addEventListener("click", () => {
+  // Atualiza o índice para o próximo emoji
+  emojiIndex = (emojiIndex + 1) % emojis.length;
+  emojiSpan.textContent = emojis[emojiIndex];
+});
+
 // Eventos
 botaoSortear.addEventListener("click", sortearNumero);
 botaoReiniciar.addEventListener("click", reiniciar);
