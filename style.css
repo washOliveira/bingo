@@ -108,28 +108,3 @@ button.hidden {
     font-size: 1.5em;
   }
 }
-
-@media (max-width: 480px) {
-  #numbers {
-    grid-template-columns: repeat(5, 1fr); /* Ajusta para 3 colunas no mobile */
-  }
-
-  #numbers div {
-    width: 25px;
-    height: 25px;
-    font-size: 10px;
-  }
-
-  button {
-    font-size: 12px;
-    padding: 6px 12px;
-  }
-
-  h1 {
-    font-size: 1.2em;
-  }
-
-  #ultimo-numero {
-    font-size: 16px;
-  }
-}
