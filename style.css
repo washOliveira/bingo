@@ -90,12 +90,12 @@ button.hidden {
 /* Estilos responsivos */
 @media (max-width: 768px) {
   #numbers {
-    grid-template-columns: repeat(5, 3fr); /* Ajusta para 5 colunas no mobile */
+    grid-template-columns: repeat(7, 1fr); /* Ajusta para 5 colunas no mobile */
   }
 
   #numbers div {
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     font-size: 12px;
   }
 
