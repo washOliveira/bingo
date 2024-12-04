@@ -57,4 +57,17 @@ function exibirCartela() {
 }
 
 // Evento para gerar uma nova cartela
-botaoGerarCartela.addEventListener("click", exibirCartela);
+let primeiraVez = true; // Variável para rastrear se é a primeira vez
+
+botaoGerarCartela.addEventListener("click", () => {
+  if (!primeiraVez) {
+    const confirmacao = confirm("Tem certeza de que deseja gerar uma nova cartela? A cartela atual será substituída.");
+    if (!confirmacao) {
+      return; // Sai da função se o usuário cancelar
+    }
+  }
+  primeiraVez = false; // Atualiza a variável após a primeira geração
+  exibirCartela(); // Gera a cartela
+});
+
+
