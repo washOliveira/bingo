@@ -1,7 +1,16 @@
 const botaoGerarCartela = document.getElementById("gerar-cartela");
 const cartelaDiv = document.getElementById("cartela");
 
-// Função para gerar números aleatórios
+// Função para obter a letra correspondente
+function obterLetra(numero) {
+  if (numero <= 15) return "B";
+  if (numero <= 30) return "I";
+  if (numero <= 45) return "N";
+  if (numero <= 60) return "G";
+  return "O";
+}
+
+// Função para gerar números aleatórios com letras
 function gerarNumerosBingo() {
   const ranges = {
     B: [1, 15],
@@ -21,9 +30,9 @@ function gerarNumerosBingo() {
         numeros.push(numeroAleatorio);
       }
     }
-    cartela.push(...numeros);
+    cartela.push(...numeros.map((n) => ({ letra: obterLetra(n), numero: n })));
   }
-  cartela[12] = "FREE"; // Espaço central "GRÁTIS"
+  cartela[12] = { letra: "", numero: "FREE" }; // Espaço central "GRÁTIS"
   return cartela;
 }
 
@@ -31,11 +40,11 @@ function gerarNumerosBingo() {
 function exibirCartela() {
   const numeros = gerarNumerosBingo();
   cartelaDiv.innerHTML = ""; // Limpar a cartela anterior
-  numeros.forEach((numero, index) => {
+  numeros.forEach((item, index) => {
     const celula = document.createElement("div");
-    celula.textContent = numero;
+    celula.textContent = item.letra ? `${item.letra}${item.numero}` : item.numero;
     celula.classList.add("celula");
-    if (numero === "FREE") {
+    if (item.numero === "FREE") {
       celula.classList.add("marcado"); // Marca o espaço "FREE"
     } else {
       celula.addEventListener("click", () => {
