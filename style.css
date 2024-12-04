@@ -111,7 +111,7 @@ button.hidden {
 
 @media (max-width: 480px) {
   #numbers {
-    grid-template-columns: repeat(3, 1fr); /* Ajusta para 3 colunas no mobile */
+    grid-template-columns: repeat(5, 1fr); /* Ajusta para 3 colunas no mobile */
   }
 
   #numbers div {
