@@ -10,10 +10,19 @@
 }
 
 /* Estilos globais */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: "Verdana", monospace;
   text-align: center;
-  background-color: var(--cor-primaria);
+  background-image: url('background.svg');
+  background-repeat: no-repeat; /* Evita repetir a imagem */
+  background-size: cover;     /* Ajusta a imagem para cobrir todo o fundo */
+  background-position: center; /* Centraliza a imagem */
   margin: 0;
   padding: 20px;
 }
