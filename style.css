@@ -153,7 +153,8 @@ button.hidden {
 #rodape {
   margin-top: 20px;
   font-size: 14px;
-  color: var(--cor-fonte-bordas); 
+  color: var(--cor-fonte-bordas);
+  margin-bottom: 30px;
 }
 
 .cartela {
