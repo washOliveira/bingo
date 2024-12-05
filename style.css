@@ -153,7 +153,7 @@ button.hidden {
   grid-template-columns: repeat(5, 1fr);
   gap: 5px;
   margin: 20px auto;
-  max-width: 250px;
+  max-width: 275px;
 }
 
 .cartela div {
